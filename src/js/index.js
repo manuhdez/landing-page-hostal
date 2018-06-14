@@ -1,5 +1,9 @@
 const heroForm = document.querySelector('#hero-form');
+const heroInput = heroForm.querySelector('[type="email"]');
 
 heroForm.querySelector('[type="submit"]').addEventListener('click', (e) => {
-  e.preventDefault();
+  console.log(heroInput.value)
+  if (heroInput.value && heroInput.value.includes('@')) {
+    e.preventDefault();
+  }
 })
