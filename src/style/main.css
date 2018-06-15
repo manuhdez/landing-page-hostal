@@ -2,6 +2,8 @@
 :root {
   --hero-img: 100vw;
   --dark-color: #2f2e2e;
+  --dark-filter: rgba(0,0,0,0.4);
+  --darker-filter: rgba(0,0,0,0.7);
   --dark-gradient: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0,0,0,1));
   --logo-height: 50px;
   --button-success: #6ADB5C;
@@ -147,11 +149,16 @@ form input[type="submit"]:active {
 
 .feat-img {
   max-width: 100%;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   grid-row: 2 / 3;
   box-shadow: 15px 15px 0 rgba(0,0,0, 0.7);
+  transition: all 1000ms ease-in-out;
 }
+.feat-img:hover {
+  background-size: 110%;
+}
+
 .feat-text h2 {
   font-family: 'IBM Plex Serif';
   font-size: var(--feat-title);
@@ -192,6 +199,57 @@ form input[type="submit"]:active {
 
 /* Hightlight */
 #highlight {
-  height: 600px;
-  background-color: #333;
+  position: relative;
+  height: 450px;
+  padding: 0 12%;
+  color: white;
+  text-align: center;
+}
+
+#highlight:hover #high-bg {
+  background-size: 110%;
+}
+#highlight:hover #high-filter {
+  background: var(--darker-filter);
+}
+
+#high-bg {
+  background-image: url('../../assets/images/highlight-cover.jpg');
+  background-size: 100%;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 3000ms ease-in-out;
+}
+
+.high-text {
+  font-size: 3.5rem;
+  font-family: 'IBM Plex Serif';
+  font-weight: normal;
+  line-height: 1.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  transition: all 500ms ease-in-out;
+}
+
+#high-filter {
+  background-color: var(--dark-filter);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 2000ms ease-in-out;
+}
+
+/* Footer */
+#footer {
+  height: 500px;
+  background-color: #3e3d3d;
 }
