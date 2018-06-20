@@ -94,38 +94,54 @@
   font-weight: lighter;
 }
 
-form {
-  grid-column: 2 / 7;
-  grid-row: 10;
-  align-self: flex-end;
+#hero-form {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
 }
 
-form input[type="email"] {
+.input {
   height: 40px;
-  width: 65%;
+  width: 70%;
   border-radius: 5px;
-  border: none;
-  background: #F2F2F2;
   padding: 0 10px;
   font-size: 0.88rem;
-
+}
+.head-input {
+  border: none;
+  background: #F2F2F2;
+}
+.footer-input {
+  background: none;
+  border: 2px solid white;
+  color: white;
 }
 
-form input[type="submit"] {
+.button {
   height: 40px;
   width: 20%;
-  background-color: var(--button-success);
-  border: none;
   border-radius: 5px;
   color: white;
-  font-size: 1rem;
+  font-size: 0.88rem;
+  background: none;
+}
+.head-submit {
+  background-color: var(--button-success);
+  border: none;
+}
+.head-submit:hover {
+  filter: brightness(108%);
+}
+.head-submit:active {
+  filter: brightness(90%);
 }
 
-form input[type="submit"]:hover {
-  filter: brightness(120%);
+.footer-submit {
+  border: 2px solid white;
 }
-form input[type="submit"]:active {
-  filter: brightness(80%);
+.footer-submit:hover {
+  background-color: #fff;
+  color: #444;
 }
 
 /* Features section */
@@ -252,4 +268,116 @@ form input[type="submit"]:active {
 #footer {
   height: 500px;
   background-color: #3e3d3d;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 110px 180px 120px 380px 120px auto 100px;
+  grid-template-rows: 20px 60px 40px auto 50px;
+}
+
+.foot-logo {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-image: url('../../assets/branding/propuesta\ logo.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.footer-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.social {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+.icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.about {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+  font-family: 'IBM Plex Sans';
+}
+.about p {
+  font-size: 0.88rem;
+}
+
+.mailing {
+  grid-column: 6 / 7;
+  grid-row: 4 / 5;
+}
+#footer-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer h3 {
+  text-transform: uppercase;
+  font-family: 'IBM Plex Sans';
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Media queries */
+
+/* Tablet size */
+
+/* Mobile size */
+@media (max-width: 414px){
+  /* Hero section */
+  #header {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 8px;
+  }
+  #logo {
+    grid-column: 3/5;
+    grid-row: 1/span 1;
+    align-self: flex-end;
+  }
+  #nav-bar {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+  }
+  #nav-bar ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  #nav-bar ul li:nth-child(2) {
+    margin: 10px 0;
+  }
+  #header-text {
+    grid-column: 2 / 6;
+    grid-row: 5 / span 2;
+  }
+  #header-text h2 {
+    font-size: 2rem;
+  }
+  #header-text p {
+    font-size: 1rem;
+  }
+  #hero-form {
+    grid-column: 2/6;
+    grid-row: 8 / span 1;
+    align-self: flex-start;
+  }
+
+  /* Features section */
+
+
+  /* Highlight section */
+
+
+  /* Footer section */
+
+
 }

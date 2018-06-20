@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Landing page</title>
   <link rel="stylesheet" href="./src/style/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
 </head>
 
 <body>
@@ -23,18 +25,18 @@
           <a href="#features">Features</a>
         </li>
         <li class="nav-link">
-          <a href="">Contact</a>
+          <a href="#footer">Contact</a>
         </li>
       </ul>
     </nav>
     <div id="header-text">
       <h2 class="title">Vive una experiencia única</h2>
       <p class="subtitle">Suscribete a nuestro mail list para recibir una notificación por correo cuando el hostal se encuentre abierto a reservas</p>
+      <form id="hero-form">
+        <input type="email" placeholder="Escribe tu email" required class="input head-input">
+        <input type="submit" value="Enviar" class="button head-submit">
+      </form>
     </div>
-    <form id="hero-form">
-      <input type="email" placeholder="Escribe tu email" required>
-      <input type="submit" class="button form-button" value="Enviar">
-    </form>
     <div id="scroll-down"></div>
   </header>
   <section id="features">
@@ -68,7 +70,29 @@
     <div id="high-filter"></div>
     <p class="high-text">Si aún no has probado esta experiencia, plantéatela en tus próximas vacaciones, no te arrepentiras</p>
   </section>
-  <footer id="footer"></footer>
+  <footer id="footer">
+    <div class="foot-logo"></div>
+    <div class="social">
+      <h3>conecta</h3>
+      <i class="fab fa-facebook icon"></i>
+      <i class="fab fa-instagram icon"></i>
+    </div>
+    <div class="about">
+      <h3>Sobre nosotros</h3>
+      <p>The term "boutique hotel" has been widely used in recent years, but what does it mean and why should you stay in one?</p>
+      <p>There are lots of companies that claim to specialise in boutique hotels. For many, a boutique hotel is simply one that's
+        not part of a national or international chain and that distinguishes itself by its design, location or additional
+        features.
+      </p>
+    </div>
+    <div class="mailing">
+      <h3>Recibe nuestras ofertas</h3>
+      <form action="" id="footer-form">
+        <input type="email" class="input footer-input" placeholder="Introduce tu email" required>
+        <input type="submit" value="Confirmar" class="button footer-submit">
+      </form>
+    </div>
+  </footer>
   <script src="./src/js/index.js"></script>
 </body>
 
